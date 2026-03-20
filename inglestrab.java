@@ -19,7 +19,15 @@ public class inglestrab {
         System.out.println("\nTask added to TO DO!\n");
     }
 
-      // UPDATE TASK (edit a task from TO DO)
+    // VIEW TASKS (shows all lists)
+    public static void viewTask(){
+        System.out.println("\nTo Do: " + todo);
+        System.out.println("Doing: " + doing);
+        System.out.println("Done: " + done);
+
+    }
+
+ // UPDATE TASK (edit a task from TO DO)
     public static void uptadeTask(){
         // check if TO DO list is empty
         if (todo.isEmpty()){
@@ -27,5 +35,31 @@ public class inglestrab {
             return;
         }
 
+        // Show all tasks with their index
+        for (int i=0; i<todo.size(); i++){
+            System.out.println(i + " - " + todo.get(i));
+        }
+        try{
+        System.out.println("\nChoose index: ");
+        int index = sc.nextInt();
+        sc.nextLine();
+
+         // validate index
+        if (index <0 || index >= todo.size()){
+            System.out.println("\nInvalid index!\n");
+            return;
+        }
+
+        System.out.println("New name task: ");
+        String newTask = sc.nextLine();
+
+        // replace old task with new one
+        todo.set(index, newTask);
+        System.out.println("\nTask updated!\n");
+
+    } catch (Exception e){
+        System.out.println("Invalid input! Try again");
+        sc.nextLine();
+    }
 }
 }
