@@ -18,4 +18,14 @@ public class inglestrab {
         todo.add(task);
         System.out.println("\nTask added to TO DO!\n");
     }
+
+      // UPDATE TASK (edit a task from TO DO)
+    public static void uptadeTask(){
+        // check if TO DO list is empty
+        if (todo.isEmpty()){
+            System.out.println("No Task!");
+            return;
+        }
+
+}
 }
