@@ -124,4 +124,50 @@ public class inglestrab {
         }
     }
 
+     // VIEW BOARD (show Kanban board)
+    public static void viewBoard(){
+        System.out.println("\nTo Do: " + todo);
+        System.out.println("Doing: " + doing);
+        System.out.println("Done: " + done);
+    }
+
+     // KANBAN MENU
+    public static void kanbanBoard(){
+        int option;
+
+        do{
+            System.out.println("       KANBAN              ");
+            System.out.println("1 - Move TO DO → DOING     ");
+            System.out.println("2 - Move DOING → DONE      ");
+            System.out.println("3 - View Board             ");
+            System.out.println("0 - Back                   ");
+
+            option = sc.nextInt();
+
+            switch (option) {
+                case 1:
+                    moveTODoing();
+                    break;
+
+                case 2:
+                    moveToDone();
+                    break;
+
+                case 3:
+                    viewBoard();
+                    break;
+
+                case 0:
+                    System.out.println("Exiting the program...");
+                    break;
+
+                default:
+                    System.out.println("Invalid option!");
+                    break;
+            }
+
+
+        } while (option != 0);
+    }
+
 }
