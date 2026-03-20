@@ -61,5 +61,44 @@ public class inglestrab {
         System.out.println("Invalid input! Try again");
         sc.nextLine();
     }
-}
+  }
+
+   // DELETE TASK (remove task from TO DO)
+    public static void deleteTask(){
+        
+        if (todo.isEmpty()){
+            System.out.println("No Task!");
+            return;
+        }
+         for (int i=0; i<todo.size(); i++){
+            System.out.println(i + " - " + todo.get(i));
+        }
+        try{
+        System.out.println("\nChoose index: ");
+        int index = sc.nextInt();
+        sc.nextLine();
+
+         if (index <0 || index >= todo.size()){
+            System.out.println("\nInvalid index!\n");
+            return;
+        }
+
+        // Ask for confirmation
+        System.out.println("Are you sure you want to delete this task? (Y/N): ");
+        String confirm = sc.nextLine();
+
+        if (confirm.equalsIgnoreCase("Y")){
+            todo.remove(index);
+            System.out.println("\nTask Removed!\n");
+        }
+
+        else{
+            System.out.println("\nOperation cancelled\n");
+        }
+        } catch (Exception e){
+        System.out.println("\nInvalid input! Try again\n");
+        sc.nextLine();
+     }
+    }
+
 }
