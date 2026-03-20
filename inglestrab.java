@@ -99,6 +99,29 @@ public class inglestrab {
         System.out.println("\nInvalid input! Try again\n");
         sc.nextLine();
      }
+ }
+
+     //  MOVE TO DO → DOING
+    public static void moveTODoing(){
+        if (!todo.isEmpty()){
+              // Remove first task from TO DO and add to DOING
+            doing.add(todo.remove(0));
+            System.out.println("\nMoved to Doing!\n");
+        }
+        else{
+            System.out.println("\nNo tasks in TO Do!\n");
+        }
+    }
+
+    // MOVE DOING → DONE
+    public static void moveToDone(){
+        if (!doing.isEmpty()){
+            done.add(doing.remove(0));
+            System.out.println("\nMoved to Done!\n");
+        }
+        else{
+            System.out.println("\nNo tasks in Doing!\n");
+        }
     }
 
 }
