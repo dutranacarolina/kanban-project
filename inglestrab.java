@@ -170,4 +170,55 @@ public class inglestrab {
         } while (option != 0);
     }
 
+     // MAIN METHOD (main menu)
+    public static void main(String[] args) {
+        int option;
+
+        do{
+            System.out.println("         KANBAN MENU             ");
+            System.out.println("1 - Add task                     ");
+            System.out.println("2 - View task                    ");
+            System.out.println("3 - Uptade task                  ");
+            System.out.println("4 - Remove task                  ");
+            System.out.println("5 - Kanban board                 ");
+            System.out.println("0 - Back                         ");
+
+            option = sc.nextInt();
+            sc.nextLine();
+
+            switch (option) {
+                case 1:
+                    addTaks();
+                    break;
+
+                case 2:
+                    viewTask();
+                    break;
+
+                case 3:
+                    uptadeTask();
+                    break;
+
+                case 4:
+                    deleteTask();
+                    break;
+
+                case 5:
+                    kanbanBoard();
+                    break;
+
+                case 0:
+                    System.out.println("Exiting the program...");
+                    break;
+                
+                default:
+                    System.out.println("Invalid option!");
+                    break;
+            }
+
+        } while (option != 0);
+        
+        
+    }
 }
+
