@@ -9,4 +9,13 @@ public class inglestrab {
     static ArrayList<String> done = new ArrayList<>();
     // Scanner to read user input
     static Scanner sc = new Scanner(System.in);
+
+
+ // ADD TASK (adds a task to TO DO list)
+    public static void addTaks(){
+        System.out.println("Enter task: ");
+        String task = sc.nextLine();
+        todo.add(task);
+        System.out.println("\nTask added to TO DO!\n");
+    }
 }
